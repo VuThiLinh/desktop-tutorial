@@ -1,0 +1,37 @@
+@mixin container {
+    margin: auto;
+    text-align: center;
+    width: 600px;
+    height: 350px;
+    box-shadow: 2px 2px 8px rgb(80, 79, 76);
+    border-radius: 5px;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin input {
+    @include size(450px, 50px);
+    background-color: transparent;
+    box-shadow: 0 0 4px #333;
+    border: #333;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+@mixin button() {
+    @include size(130px,50px);
+    background-color: transparent;
+    border-radius: 5px;
+    border: #333;
+    box-shadow: 0 0 4px #333;
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f73737;
+    outline: none;
+}

@@ -1,0 +1,76 @@
+@import './mixins';
+
+.container {
+    @include container;
+}
+@-webkit-keyframes my {
+    0% { color: #f73737; } 
+    50% { color: #fff;  } 
+    100% { color: #f73737;  } 
+}
+@-moz-keyframes my { 
+    0% { color: #f73737;  } 
+    50% { color: rgb(226, 241, 9);  }
+    100% { color: #f73737;  } 
+}
+@-o-keyframes my { 
+    0% { color: #f73737; } 
+    50% { color: rgb(226, 241, 9); } 
+    100% { color: #f73737;  } 
+}
+@keyframes my { 
+    0% { color: #f73737;  } 
+    50% { color: rgb(226, 241, 9);  }
+    100% { color: #f73737;  } 
+} 
+.heading {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size:36px;
+    font-weight:bold;
+    -webkit-animation: my 700ms infinite;
+    -moz-animation: my 700ms infinite; 
+    -o-animation: my 700ms infinite; 
+    animation: my 700ms infinite;
+}
+.todoForm {
+    .todoInput {
+        @include input;
+    }
+    span {
+        float: left;
+        margin-left: 70px;
+        margin-bottom: 10px;
+        color: #f73737;
+    }
+    p {
+        font-size: 18px;
+        color: #333;
+        text-align: right;
+        margin: 0 70px 6px 0;
+        text-align: right
+    }
+    .success {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: bold
+    }
+    .todoButton {
+        @include button;
+
+        &:hover {
+            color: rgb(226, 241, 9);
+        }
+    }
+    .btnLog {
+        @include button;
+        margin-left: 20px;
+
+        .linkNav {
+            text-decoration: none;
+        }
+    }
+}
+
+
+

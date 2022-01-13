@@ -1,0 +1,74 @@
+@import './mixins';
+
+.btnLog {
+    @include button;
+    color: #333;
+    position: absolute;
+    right: 0;
+    top: 30px;
+
+    &:hover {
+        background-color: rgb(22, 169, 238);
+    }
+}
+.content {
+    text-align: center;
+    margin-top: 150px;
+
+    .heading {
+        font-size: 40px;
+        color: rgb(22, 169, 238)
+    }
+    .addTodo {
+        .todoInput {
+            @include input;
+        }
+        .addBtn {
+            @include button;
+            width: 60px;
+            color: #333;
+
+            &:hover {
+                background-color: rgb(22, 169, 238);
+            }
+        }
+    }
+}
+.listTodo {
+    display: flex;
+    width: 550px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+
+    .todoItem {
+        margin-left: 20px;
+    }
+    .task {
+        margin-right: 100px;
+
+        .edit {
+            color: rgb(45, 6, 136);
+            font-weight: bold;
+        }
+        .delete {
+            margin-left: 30px;
+            color: rgb(187, 29, 8);
+            font-weight: bold;
+        }
+    }
+    .editInput {
+        @include input;
+        @include size(150px, 36px);
+        font-size: 12px;
+        padding-left: 5px
+    }
+    .editSave {
+        @include button;
+        @include size(40px, 36px);
+        color: rgb(175, 6, 85);
+        font-size: 14px;
+        margin-top: 0;
+        
+    }
+}
